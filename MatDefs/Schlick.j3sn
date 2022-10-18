@@ -1,0 +1,23 @@
+ShaderNodeDefinitions{ 
+    ShaderNodeDefinition FresnelSchlick {      
+        Type: Fragment
+
+        Shader GLSL100: MatDefs/Schlick100.frag
+        
+        Documentation{
+                        
+            @input vec3 specular Specular color
+            @input vec3 normal Frag normal
+            @input vec3 lightDir Light direction
+            @output vec3 outColor The resulting color
+        }
+        Input {
+            vec3 specular
+            vec3 normal
+            vec3 lightDir
+        }
+        Output {
+             vec3 outColor
+        }
+    }
+}

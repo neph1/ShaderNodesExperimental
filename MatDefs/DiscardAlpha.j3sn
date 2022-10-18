@@ -1,0 +1,19 @@
+ShaderNodeDefinitions{ 
+    ShaderNodeDefinition DiscardAlpha {      
+        Type: Fragment
+
+        Shader GLSL100: MatDefs/DiscardAlpha100.frag
+        
+        Documentation{
+            Removes alpha channel (or w value from a vec4)            
+            @input vec4 input 
+            @output vec3 output 
+        }
+        Input {
+            vec4 input
+        }
+        Output {
+             vec3 output
+        }
+    }
+}

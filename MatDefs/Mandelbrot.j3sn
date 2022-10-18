@@ -1,0 +1,21 @@
+ShaderNodeDefinitions{ 
+    ShaderNodeDefinition Mandelbrot {      
+        Type: Fragment
+
+        Shader GLSL100: MatDefs/Mandelbrot100.frag
+        
+        Documentation{
+            https://www.shadertoy.com/view/lsX3W4
+            Generates a Mandelbrot fractal            
+            @input vec2 coord
+            @output float inside 
+        }
+        Input {
+            vec2 coord
+            float time;
+        }
+        Output {
+             float inside
+        }
+    }
+}
